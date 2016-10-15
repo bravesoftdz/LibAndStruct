@@ -1,0 +1,348 @@
+Start at: 30.11.2014 10:37:38
+Folder: Input
+
+
+Spent time: 31,25ms
+total test passed: 0
+successful: 0
+failed: 0
+==================================
+Start at: 30.11.2014 11:01:27
+Folder: Input
+
+01: NOT TESTED
+02: NOT TESTED
+03: NOT TESTED
+04: NOT TESTED
+05: NOT TESTED
+06: NOT TESTED
+07: NOT TESTED
+08: NOT TESTED
+09: NOT TESTED
+10: NOT TESTED
+11: NOT TESTED
+12: NOT TESTED
+
+Spent time: 453,125ms
+total test passed: 0
+successful: 0
+failed: 0
+==================================
+Start at: 30.11.2014 11:02:04
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 437,5ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 30.11.2014 11:02:35
+Folder: Input
+
+Start at: 30.11.2014 11:03:17
+Folder: Input
+
+01: ERROR
+02: ERROR
+03: ERROR
+04: ERROR
+05: ERROR
+06: ERROR
+07: ERROR
+08: ERROR
+09: ERROR
+10: ERROR
+11: ERROR
+12: ERROR
+
+Spent time: 921,875ms
+total test passed: 12
+successful: 0
+failed: 12
+==================================
+Start at: 30.11.2014 11:06:08
+Folder: Input
+
+01: NOT TESTED
+02: NOT TESTED
+03: NOT TESTED
+04: NOT TESTED
+05: NOT TESTED
+06: NOT TESTED
+07: NOT TESTED
+08: NOT TESTED
+09: NOT TESTED
+10: NOT TESTED
+11: NOT TESTED
+12: NOT TESTED
+
+Spent time: 1157,2266ms
+total test passed: 0
+successful: 0
+failed: 0
+==================================
+Start at: 30.11.2014 11:06:48
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 406,25ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 30.11.2014 11:06:52
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 312,5ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 30.11.2014 11:26:53
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 875ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 02.12.2014 13:37:15
+Folder: Input
+
+01: ERROR
+02: ERROR
+03: ERROR
+04: ERROR
+05: ERROR
+06: ERROR
+07: ERROR
+08: ERROR
+09: ERROR
+10: ERROR
+11: ERROR
+12: ERROR
+
+Spent time: 6139,2495ms
+total test passed: 12
+successful: 0
+failed: 12
+==================================
+Start at: 02.12.2014 13:37:25
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 124,972ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 02.12.2014 13:45:57
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 78,0385ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 02.12.2014 13:45:59
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 109,2539ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 02.12.2014 13:50:43
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 78,005ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 02.12.2014 13:50:44
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 124,808ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 02.12.2014 14:03:38
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 93,6006ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 02.12.2014 14:18:59
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 78,001ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 02.12.2014 14:19:01
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 124,8016ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================

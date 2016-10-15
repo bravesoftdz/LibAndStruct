@@ -1,0 +1,881 @@
+Start at: 24.11.2014 21:22:53
+Folder: Input
+
+01: NOT TESTED
+02: NOT TESTED
+03: NOT TESTED
+04: NOT TESTED
+05: NOT TESTED
+06: NOT TESTED
+07: NOT TESTED
+08: NOT TESTED
+09: NOT TESTED
+10: NOT TESTED
+11: NOT TESTED
+12: NOT TESTED
+
+Spent time: 375ms
+total test passed: 0
+successful: 0
+failed: 0
+==================================
+Start at: 24.11.2014 21:24:14
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 532,2266ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 24.11.2014 21:24:34
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+
+Spent time: 367,1875ms
+total test passed: 12
+successful: 12
+failed: 0
+==================================
+Start at: 24.11.2014 21:59:31
+Folder: Input
+
+01: NOT TESTED
+02: NOT TESTED
+03: NOT TESTED
+04: NOT TESTED
+05: NOT TESTED
+06: NOT TESTED
+07: NOT TESTED
+08: NOT TESTED
+09: NOT TESTED
+10: NOT TESTED
+11: NOT TESTED
+12: NOT TESTED
+g1: NOT TESTED
+g10: NOT TESTED
+g2: NOT TESTED
+g3: NOT TESTED
+g4: NOT TESTED
+g5: NOT TESTED
+g6: NOT TESTED
+g7: NOT TESTED
+g8: NOT TESTED
+g9: NOT TESTED
+
+Spent time: 895,5078ms
+total test passed: 0
+successful: 0
+failed: 0
+==================================
+Start at: 24.11.2014 21:59:39
+Folder: Input
+
+01: NOT TESTED
+02: NOT TESTED
+03: NOT TESTED
+04: NOT TESTED
+05: NOT TESTED
+06: NOT TESTED
+07: NOT TESTED
+08: NOT TESTED
+09: NOT TESTED
+10: NOT TESTED
+11: NOT TESTED
+12: NOT TESTED
+g1: NOT TESTED
+g10: NOT TESTED
+g2: NOT TESTED
+g3: NOT TESTED
+g4: NOT TESTED
+g5: NOT TESTED
+g6: NOT TESTED
+g7: NOT TESTED
+g8: NOT TESTED
+g9: NOT TESTED
+
+Spent time: 750ms
+total test passed: 0
+successful: 0
+failed: 0
+==================================
+Start at: 24.11.2014 22:03:15
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+g1: OK
+g10: OK
+g2: OK
+g3: OK
+g4: OK
+g5: OK
+g6: OK
+g7: OK
+g8: OK
+g9: OK
+
+Spent time: 718,75ms
+total test passed: 22
+successful: 22
+failed: 0
+==================================
+Start at: 30.11.2014 10:29:40
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+g1: OK
+g10: OK
+g100: OK
+g11: OK
+g12: OK
+g13: OK
+g14: OK
+g15: OK
+g16: OK
+g17: OK
+g18: OK
+g19: OK
+g2: OK
+g20: OK
+g21: OK
+g22: OK
+g23: OK
+g24: OK
+g25: OK
+g26: OK
+g27: OK
+g28: OK
+g29: OK
+g3: OK
+g30: OK
+g31: OK
+g32: OK
+g33: OK
+g34: OK
+g35: OK
+g36: OK
+g37: OK
+g38: OK
+g39: OK
+g4: OK
+g40: OK
+g41: OK
+g42: OK
+g43: OK
+g44: OK
+g45: OK
+g46: OK
+g47: OK
+g48: OK
+g49: OK
+g5: OK
+g50: OK
+g51: OK
+g52: OK
+g53: OK
+g54: OK
+g55: OK
+g56: OK
+g57: OK
+g58: OK
+g59: OK
+g6: OK
+g60: OK
+g61: OK
+g62: OK
+g63: OK
+g64: OK
+g65: OK
+g66: OK
+g67: OK
+g68: OK
+g69: OK
+g7: OK
+g70: OK
+g71: OK
+g72: OK
+g73: OK
+g74: OK
+g75: OK
+g76: OK
+g77: OK
+g78: OK
+g79: OK
+g8: OK
+g80: OK
+g81: OK
+g82: OK
+g83: OK
+g84: OK
+g85: OK
+g86: OK
+g87: OK
+g88: OK
+g89: OK
+g9: OK
+g90: OK
+g91: OK
+g92: OK
+g93: OK
+g94: OK
+g95: OK
+g96: OK
+g97: OK
+g98: OK
+g99: OK
+
+Spent time: 5022,461ms
+total test passed: 112
+successful: 112
+failed: 0
+==================================
+Start at: 30.11.2014 10:29:49
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+g1: OK
+g10: OK
+g100: OK
+g11: OK
+g12: OK
+g13: OK
+g14: OK
+g15: OK
+g16: OK
+g17: OK
+g18: OK
+g19: OK
+g2: OK
+g20: OK
+g21: OK
+g22: OK
+g23: OK
+g24: OK
+g25: OK
+g26: OK
+g27: OK
+g28: OK
+g29: OK
+g3: OK
+g30: OK
+g31: OK
+g32: OK
+g33: OK
+g34: OK
+g35: OK
+g36: OK
+g37: OK
+g38: OK
+g39: OK
+g4: OK
+g40: OK
+g41: OK
+g42: OK
+g43: OK
+g44: OK
+g45: OK
+g46: OK
+g47: OK
+g48: OK
+g49: OK
+g5: OK
+g50: OK
+g51: OK
+g52: OK
+g53: OK
+g54: OK
+g55: OK
+g56: OK
+g57: OK
+g58: OK
+g59: OK
+g6: OK
+g60: OK
+g61: OK
+g62: OK
+g63: OK
+g64: OK
+g65: OK
+g66: OK
+g67: OK
+g68: OK
+g69: OK
+g7: OK
+g70: OK
+g71: OK
+g72: OK
+g73: OK
+g74: OK
+g75: OK
+g76: OK
+g77: OK
+g78: OK
+g79: OK
+g8: OK
+g80: OK
+g81: OK
+g82: OK
+g83: OK
+g84: OK
+g85: OK
+g86: OK
+g87: OK
+g88: OK
+g89: OK
+g9: OK
+g90: OK
+g91: OK
+g92: OK
+g93: OK
+g94: OK
+g95: OK
+g96: OK
+g97: OK
+g98: OK
+g99: OK
+
+Spent time: 4406,25ms
+total test passed: 112
+successful: 112
+failed: 0
+==================================
+Start at: 02.12.2014 13:43:02
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+g01: OK
+g02: OK
+g03: OK
+g04: OK
+g05: OK
+g06: OK
+g07: OK
+g08: OK
+g09: OK
+g10: OK
+g11: OK
+g12: OK
+g13: OK
+g14: OK
+g15: OK
+g16: OK
+g17: OK
+g18: OK
+g19: OK
+g20: OK
+g21: OK
+g22: OK
+g23: OK
+g24: OK
+g25: OK
+g26: OK
+g27: OK
+g28: OK
+g29: OK
+g30: OK
+g31: OK
+g32: OK
+g33: OK
+g34: OK
+g35: OK
+g36: OK
+g37: OK
+g38: OK
+g39: OK
+g40: OK
+g41: OK
+g42: OK
+g43: OK
+g44: OK
+g45: OK
+g46: OK
+g47: OK
+g48: OK
+g49: OK
+g50: OK
+g51: OK
+g52: OK
+g53: OK
+g54: OK
+g55: OK
+g56: OK
+g57: OK
+g58: OK
+g59: OK
+g60: OK
+g61: OK
+g62: OK
+g63: OK
+g64: OK
+g65: OK
+g66: OK
+g67: OK
+g68: OK
+g69: OK
+g70: OK
+g71: OK
+g72: OK
+g73: OK
+g74: OK
+g75: OK
+g76: OK
+g77: OK
+g78: OK
+g79: OK
+g80: OK
+g81: OK
+g82: OK
+g83: OK
+g84: OK
+g85: OK
+g86: OK
+g87: OK
+g88: OK
+g89: OK
+g90: OK
+g91: OK
+g92: OK
+g93: OK
+g94: OK
+g95: OK
+g96: OK
+g97: OK
+g98: OK
+g99: OK
+
+Spent time: 952,0697ms
+total test passed: 111
+successful: 111
+failed: 0
+==================================
+Start at: 02.12.2014 13:43:05
+Folder: Input
+
+Start at: 02.12.2014 13:43:22
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+g01: OK
+g02: OK
+g03: OK
+g04: OK
+g05: OK
+g06: OK
+g07: OK
+g08: OK
+g09: OK
+g10: OK
+g11: OK
+g12: OK
+g13: OK
+g14: OK
+g15: OK
+g16: OK
+g17: OK
+g18: OK
+g19: OK
+g20: OK
+g21: OK
+g22: OK
+g23: OK
+g24: OK
+g25: OK
+g26: OK
+g27: OK
+g28: OK
+g29: OK
+g30: OK
+g31: OK
+g32: OK
+g33: OK
+g34: OK
+g35: OK
+g36: OK
+g37: OK
+g38: OK
+g39: OK
+g40: OK
+g41: OK
+g42: OK
+g43: OK
+g44: OK
+g45: OK
+g46: OK
+g47: OK
+g48: OK
+g49: OK
+g50: OK
+g51: OK
+g52: OK
+g53: OK
+g54: OK
+g55: OK
+g56: OK
+g57: OK
+g58: OK
+g59: OK
+g60: OK
+g61: OK
+g62: OK
+g63: OK
+g64: OK
+g65: OK
+g66: OK
+g67: OK
+g68: OK
+g69: OK
+g70: OK
+g71: OK
+g72: OK
+g73: OK
+g74: OK
+g75: OK
+g76: OK
+g77: OK
+g78: OK
+g79: OK
+g80: OK
+g81: OK
+g82: OK
+g83: OK
+g84: OK
+g85: OK
+g86: OK
+g87: OK
+g88: OK
+g89: OK
+g90: OK
+g91: OK
+g92: OK
+g93: OK
+g94: OK
+g95: OK
+g96: OK
+g97: OK
+g98: OK
+g99: OK
+
+Spent time: 998,8928ms
+total test passed: 111
+successful: 111
+failed: 0
+==================================
+Start at: 02.12.2014 14:15:45
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+g01: OK
+g02: OK
+g03: OK
+g04: OK
+g05: OK
+g06: OK
+g07: OK
+g08: OK
+g09: OK
+g10: OK
+g11: OK
+g12: OK
+g13: OK
+g14: OK
+g15: OK
+g16: OK
+g17: OK
+g18: OK
+g19: OK
+g20: OK
+g21: OK
+g22: OK
+g23: OK
+g24: OK
+g25: OK
+g26: OK
+g27: OK
+g28: OK
+g29: OK
+g30: OK
+g31: OK
+g32: OK
+g33: OK
+g34: OK
+g35: OK
+g36: OK
+g37: OK
+g38: OK
+g39: OK
+g40: OK
+g41: OK
+g42: OK
+g43: OK
+g44: OK
+g45: OK
+g46: OK
+g47: OK
+g48: OK
+g49: OK
+g50: OK
+g51: OK
+g52: OK
+g53: OK
+g54: OK
+g55: OK
+g56: OK
+g57: OK
+g58: OK
+g59: OK
+g60: OK
+g61: OK
+g62: OK
+g63: OK
+g64: OK
+g65: OK
+g66: OK
+g67: OK
+g68: OK
+g69: OK
+g70: OK
+g71: OK
+g72: OK
+g73: OK
+g74: OK
+g75: OK
+g76: OK
+g77: OK
+g78: OK
+g79: OK
+g80: OK
+g81: OK
+g82: OK
+g83: OK
+g84: OK
+g85: OK
+g86: OK
+g87: OK
+g88: OK
+g89: OK
+g90: OK
+g91: OK
+g92: OK
+g93: OK
+g94: OK
+g95: OK
+g96: OK
+g97: OK
+g98: OK
+g99: OK
+
+Spent time: 1060,8272ms
+total test passed: 111
+successful: 111
+failed: 0
+==================================
+Start at: 02.12.2014 14:15:48
+Folder: Input
+
+01: OK
+02: OK
+03: OK
+04: OK
+05: OK
+06: OK
+07: OK
+08: OK
+09: OK
+10: OK
+11: OK
+12: OK
+g01: OK
+g02: OK
+g03: OK
+g04: OK
+g05: OK
+g06: OK
+g07: OK
+g08: OK
+g09: OK
+g10: OK
+g11: OK
+g12: OK
+g13: OK
+g14: OK
+g15: OK
+g16: OK
+g17: OK
+g18: OK
+g19: OK
+g20: OK
+g21: OK
+g22: OK
+g23: OK
+g24: OK
+g25: OK
+g26: OK
+g27: OK
+g28: OK
+g29: OK
+g30: OK
+g31: OK
+g32: OK
+g33: OK
+g34: OK
+g35: OK
+g36: OK
+g37: OK
+g38: OK
+g39: OK
+g40: OK
+g41: OK
+g42: OK
+g43: OK
+g44: OK
+g45: OK
+g46: OK
+g47: OK
+g48: OK
+g49: OK
+g50: OK
+g51: OK
+g52: OK
+g53: OK
+g54: OK
+g55: OK
+g56: OK
+g57: OK
+g58: OK
+g59: OK
+g60: OK
+g61: OK
+g62: OK
+g63: OK
+g64: OK
+g65: OK
+g66: OK
+g67: OK
+g68: OK
+g69: OK
+g70: OK
+g71: OK
+g72: OK
+g73: OK
+g74: OK
+g75: OK
+g76: OK
+g77: OK
+g78: OK
+g79: OK
+g80: OK
+g81: OK
+g82: OK
+g83: OK
+g84: OK
+g85: OK
+g86: OK
+g87: OK
+g88: OK
+g89: OK
+g90: OK
+g91: OK
+g92: OK
+g93: OK
+g94: OK
+g95: OK
+g96: OK
+g97: OK
+g98: OK
+g99: OK
+
+Spent time: 951,6122ms
+total test passed: 111
+successful: 111
+failed: 0
+==================================
