@@ -1,0 +1,200 @@
+library d3d9;
+
+uses
+  Windows,
+  Classes,
+  SysUtils,
+  advApiHook,
+  Direct3D9,
+  D3DX9;
+
+exports
+  Direct3DCreate9,
+  D3DPERF_SetMarker,
+  D3DPERF_BeginEvent,
+  D3DPERF_GetStatus,
+  D3DPERF_QueryRepeatFrame,
+  D3DPERF_SetOptions,
+  D3DPERF_SetRegion,
+  D3DPERF_EndEvent;
+
+var
+  g_Font  : ID3DXFont;
+  TextRect: TRect;
+  StridesN: integer;
+  Wallhack: boolean; //включение/выключение чита
+  module:   THandle;
+
+var EndScene9Next :           function (self: pointer): HResult stdcall = nil;
+var CreateDevice9Next:        function (self: pointer; Adapter: LongWord; DeviceType: TD3DDevType; hFocusWindow: HWND; BehaviorFlags: DWord; pPresentationParameters: PD3DPresentParameters; out ppReturnedDeviceInterface: IDirect3DDevice9): HResult; stdcall = nil;
+
+var ResetNext:                function (self: pointer; const pPresentationParameters: TD3DPresentParameters): HResult; stdcall;
+var SetStreamSourceNext:      function (self: pointer; StreamNumber: LongWord; pStreamData: IDirect3DVertexBuffer9; OffsetInBytes, Stride: LongWord): HResult; stdcall;
+var DrawIndexedPrimitiveNext: function (DeviceInterface: IDirect3DDevice9; _Type: TD3DPrimitiveType; BaseVertexIndex: Integer; MinVertexIndex, NumVertices, startIndex, primCount: LongWord): HResult; stdcall;
+
+//Передача методов реальной библиотеке
+var Direct3DCreate9_Original: function(SDKVersion: LongWord): Pointer; stdcall;
+var D3DPERF_BeginEvent_Original: function(col: TD3DColor; wszName: PWideChar): Pointer; stdcall;
+var D3DPERF_EndEvent_Original: function(): Pointer; stdcall;
+var D3DPERF_SetMarker_Original: function(col: TD3DColor; wszName: PWideChar): Pointer; stdcall;
+var D3DPERF_SetRegion_Original: function(col: TD3DColor; wszName: PWideChar): Pointer; stdcall;
+var D3DPERF_QueryRepeatFrame_Original: function(): Pointer; stdcall;
+var D3DPERF_SetOptions_Original: function(dwOptions: DWORD): Pointer; stdcall;
+var D3DPERF_GetStatus_Original: function(): Pointer; stdcall;
+
+{function Direct3DCreate9(SDKVersion: LongWord): Pointer; stdcall;
+function D3DPERF_BeginEvent(col: TD3DColor; wszName: PWideChar): Pointer; stdcall;
+function D3DPERF_EndEvent(): Pointer; stdcall;
+function D3DPERF_SetMarker(col: TD3DColor; wszName: PWideChar): Pointer; stdcall;
+function D3DPERF_SetRegion(col: TD3DColor; wszName: PWideChar): Pointer; stdcall;
+function D3DPERF_QueryRepeatFrame(): Pointer; stdcall;
+function D3DPERF_SetOptions(dwOptions: DWORD): Pointer; stdcall;
+function D3DPERF_GetStatus(): Pointer; stdcall;}
+
+function GetWinDir: string; //функция возвращает место папки WINDOWS
+var
+  dir: array [0..MAX_PATH] of Char;
+begin
+  GetWindowsDirectory(dir, MAX_PATH);
+  Result:=StrPas(dir);
+end;
+
+//Собственно ссылка на оригинал
+function D3DPERF_BeginEvent(col: TD3DColor; wszName: PWideChar): Pointer; stdcall;
+begin
+  @D3DPERF_BeginEvent_Original:=GetProcAddress(module, 'D3DPERF_BeginEvent');
+  Result:=D3DPERF_BeginEvent_Original(col, wszName);
+end;
+
+function D3DPERF_EndEvent(): Pointer; stdcall;
+begin
+   @D3DPERF_EndEvent_Original:=GetProcAddress(module, 'D3DPERF_EndEvent');
+   Result:=D3DPERF_EndEvent_Original();
+end;
+
+function D3DPERF_SetMarker(col: TD3DColor; wszName: PWideChar): Pointer; stdcall;
+begin
+  @D3DPERF_SetMarker_Original:=GetProcAddress(module, 'D3DPERF_SetMarker');
+  Result:=D3DPERF_SetMarker_Original(col, wszName);
+end;
+
+function D3DPERF_SetRegion(col: TD3DColor; wszName: PWideChar): Pointer; stdcall;
+begin
+  @D3DPERF_SetRegion_Original:=GetProcAddress(module, 'D3DPERF_SetRegion');
+  Result:=D3DPERF_SetRegion_Original(col, wszName);
+end;
+
+function D3DPERF_QueryRepeatFrame(): Pointer; stdcall;
+begin
+  @D3DPERF_QueryRepeatFrame_Original:=GetProcAddress(module, 'D3DPERF_QueryRepeatFrame');
+  Result:=D3DPERF_QueryRepeatFrame_Original();
+end;
+
+function D3DPERF_SetOptions(dwOptions: DWORD): Pointer; stdcall;
+begin
+  @D3DPERF_SetOptions_Original:=GetProcAddress(module, 'D3DPERF_SetOptions');
+  Result:=D3DPERF_SetOptions_Original(dwOptions);
+end;
+
+function D3DPERF_GetStatus(): Pointer; stdcall; 
+begin
+  @D3DPERF_GetStatus_Original:=GetProcAddress(module, 'D3DPERF_GetStatus');
+  Result:=D3DPERF_GetStatus_Original()
+end;
+
+procedure CheckPressed; //Клавиши включения команд чита
+begin
+  if ((GetAsyncKeyState(46) and 1) <> 0) then  //При нажатии на Delete
+    begin
+      Wallhack:= not Wallhack;
+    end;
+end;
+
+procedure All_OnLostDevice;  //Реакция при потере фокуса
+begin
+  g_Font.OnLostDevice;
+end;
+
+procedure All_OnResetDevice;  //Реакция на возобнавление фокуса
+begin
+  g_Font.OnResetDevice;
+end;
+
+function DrawIndexedPrimitiveCallback(DeviceInterface: IDirect3DDevice9; _Type: TD3DPrimitiveType; BaseVertexIndex: Integer; MinVertexIndex, NumVertices, startIndex, primCount: LongWord): HResult; stdcall;
+begin
+  if (Wallhack = true) then
+    begin
+      if (StridesN = 28) and ( NumVertices > 1500) then
+        begin
+          DeviceInterface.SetRenderState(D3DRS_ZENABLE, D3DZB_FALSE);    // Отключаем обработку по глубине
+          DrawIndexedPrimitiveNext(DeviceInterface, _Type, BaseVertexIndex, MinVertexIndex, NumVertices, startIndex, primCount);
+          DeviceInterface.SetRenderState(D3DRS_ZENABLE, D3DZB_TRUE);     // Включаем обработку по глубине
+        end;
+    end;
+  Result:=DrawIndexedPrimitiveNext(DeviceInterface, _Type, BaseVertexIndex, MinVertexIndex, NumVertices, startIndex, primCount);
+end;
+
+function SetStreamSourceCallback(self: pointer; StreamNumber: LongWord; pStreamData: IDirect3DVertexBuffer9; OffsetInBytes, Stride: LongWord): HResult; stdcall;
+begin
+  StridesN:=Stride;
+  Result:=SetStreamSourceNext(self, StreamNumber, pStreamData, OffsetInBytes, StridesN);
+end;
+
+function ResetCallback(self: pointer; const pPresentationParameters: TD3DPresentParameters): HResult; stdcall;
+begin
+  All_OnLostDevice;
+  Result:=ResetNext(self, pPresentationParameters);
+  if SUCCEEDED(Result) then
+    begin
+      All_OnResetDevice;
+    end;
+end;
+
+function EndScene9Callback(self: pointer): HResult; stdcall;
+var
+  bStr: string;
+begin
+  CheckPressed;
+  if Wallhack then
+    begin
+      bStr:='On';
+    end
+  else
+    begin
+      bStr:='Off';
+    end;    
+  g_Font.DrawTextA(nil, PChar('Wallhack '+bStr), -1, @TextRect, DT_LEFT or DT_NOCLIP, D3DCOLOR_ARGB(255, 255, 0, 0));
+  Result:=EndScene9Next(self);
+end;
+
+function CreateDevice9Callback(self: pointer; Adapter: LongWord; DeviceType: TD3DDevType; hFocusWindow: HWND; BehaviorFlags: DWord; pPresentationParameters: PD3DPresentParameters; out ppReturnedDeviceInterface: IDirect3DDevice9): HResult; stdcall;
+begin
+  Result:=CreateDevice9Next(self, Adapter, DeviceType, hFocusWindow, BehaviorFlags, pPresentationParameters, ppReturnedDeviceInterface);
+  if (Result = 0) then
+    begin
+      TextRect:=Rect(10, 10, 10, 10);  //Координаты верхнего левого угла
+      D3DXCreateFont(ppReturnedDeviceInterface, 20, 0, FW_NORMAL, 1, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, 6, DEFAULT_PITCH or FF_DONTCARE, PChar('Arial') ,g_Font);
+      HookCode(GetInterfaceMethod(ppReturnedDeviceInterface, 42),  @EndScene9Callback,            @EndScene9Next);
+      HookCode(GetInterfaceMethod(ppReturnedDeviceInterface, 16),  @ResetCallback,                @ResetNext);
+      HookCode(GetInterfaceMethod(ppReturnedDeviceInterface, 100), @SetStreamSourceCallback,      @SetStreamSourceNext);
+      HookCode(GetInterfaceMethod(ppReturnedDeviceInterface, 82),  @DrawIndexedPrimitiveCallback, @DrawIndexedPrimitiveNext);
+    end
+end;
+
+function Direct3DCreate9(SDKVersion: LongWord): Pointer; stdcall;
+begin
+  module:=LoadLibrary(PChar(GetWinDir+'\system32\d3d9.dll'));
+  @Direct3DCreate9_Original:=GetProcAddress(module, 'Direct3DCreate9');
+  Result:=Direct3DCreate9_Original(SDKVersion);
+  if (Result <> nil) then
+    begin
+      if (@CreateDevice9Next <> nil) then
+        begin
+          UnhookCode(@CreateDevice9Next);
+        end;
+      HookCode(GetInterfaceMethod(result, 16), @CreateDevice9Callback, @CreateDevice9Next);
+    end;
+end;
+
+end.
+
